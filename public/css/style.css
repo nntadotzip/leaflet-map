@@ -1,0 +1,47 @@
+#map{
+    height: 400px;
+    width: 100%;
+}
+.legend{
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+#bar-chart rect{
+    fill: steelblue;
+}
+
+#bar-chart .tick line{
+    stroke: #c0c0bb;
+}
+
+#dashboard table.legend{
+
+}
+#dashboard table.legend td{
+    padding: 5px;
+}
+
+#dashboard table.legend td svg,
+#dashboard table.legend td.legendFreq,
+#dashboard table.legend td.legendPerc{
+    vertical-align: middle;
+    text-align: center;
+}
+
+#dashboard svg, #dashboard table.legend{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#dashboard rect:hover,
+#dashboard svg path:hover{
+    opacity: 0.8;
+}
+#dashboard svg path{
+    stroke: #fff;
+}
+#dashboard .tick text{
+    display: inline-block;
+}
