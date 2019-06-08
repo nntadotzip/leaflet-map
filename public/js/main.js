@@ -85,15 +85,16 @@ dotMark(myLocation);
 
 geoCode();
 function geoCode(){
-    var location = 'District 3, Việt Nam';
+    var location = '1600 Amphitheatre Parkway, Mountain View, CA';
     axios.get('http://www.datasciencetoolkit.org/maps/api/geocode/json', {
         params: {
             address: location,
-            key: 'AIzaSyAGJMRfkN2rkd6HL8PcHlKbiDlu2o5EjNw'
+            key: 'AIzaSyDJKCIvJwehLHCpGT2jNrSJP9KSTfoRzPE'
         }
     }).then(function (response) {
         console.log(response);
-        var lat = response.data.results[0].geometry.location.lat;
+        console.log("alo", response.data.results[0]);
+        var lat = response.data.results.geometry.location.lat;
         var lng = response.data.results[0].geometry.location.lng;
         var area_level_2 = response.data.results[0].address_components.types.administrative_area_level_2;
         console.log("alo", lat, lng, area_level_2);
